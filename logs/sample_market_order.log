@@ -1,0 +1,17 @@
+2024-01-15 14:30:25,123 - trading_bot - INFO - client.py:45 - Initializing Binance client...
+2024-01-15 14:30:25,456 - trading_bot - INFO - client.py:87 - Connected to testnet. Server time: 1705310425123
+2024-01-15 14:30:25,789 - trading_bot - INFO - client.py:91 - Binance client initialized successfully
+2024-01-15 14:30:26,012 - trading_bot - INFO - orders.py:89 - Starting order validation and placement for BTCUSDT
+2024-01-15 14:30:26,345 - trading_bot - INFO - validators.py:45 - Validating symbol format: BTCUSDT
+2024-01-15 14:30:26,567 - trading_bot - INFO - validators.py:45 - Symbol validation passed: BTCUSDT
+2024-01-15 14:30:26,890 - trading_bot - INFO - validators.py:67 - Validating side: BUY
+2024-01-15 14:30:27,123 - trading_bot - INFO - validators.py:67 - Side validation passed: BUY
+2024-01-15 14:30:27,456 - trading_bot - INFO - validators.py:89 - Validating order type: MARKET
+2024-01-15 14:30:27,789 - trading_bot - INFO - validators.py:89 - Order type validation passed: MARKET
+2024-01-15 14:30:28,012 - trading_bot - INFO - validators.py:109 - Validating quantity: 0.001
+2024-01-15 14:30:28,345 - trading_bot - INFO - validators.py:109 - Quantity validation passed: 0.001
+2024-01-15 14:30:28,567 - trading_bot - INFO - client.py:165 - Attempting to place order: BUY 0.001 BTCUSDT @ MARKET
+2024-01-15 14:30:28,890 - trading_bot - DEBUG - client.py:177 - Order parameters: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2024-01-15 14:30:29,123 - trading_bot - INFO - client.py:200 - Order placed successfully: Order ID 4827391, Status NEW
+2024-01-15 14:30:29,456 - trading_bot - DEBUG - client.py:201 - Full response: {'orderId': 4827391, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-Set4-8827349-537abaddbe4c', 'side': 'BUY', 'type': 'MARKET', 'origQty': '0.001', 'executedQty': '0.001', 'avgPrice': '50123.45', 'cumQuote': '50.12', 'updateTime': 1705310470123}
+2024-01-15 14:30:29,789 - trading_bot - INFO - orders.py:189 - Order completed successfully: symbol='BTCUSDT', side='BUY', order_type='MARKET', quantity=0.001, order_id=4827391, status='FILLED', executed_qty=0.001, avg_price=50123.45, timestamp=datetime.datetime(2024, 1, 15, 14, 31, 10, 123000)

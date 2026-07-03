@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Futures Testnet Trading Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0.5rem;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #229954;
+        }
+        
+        .btn-secondary {
+            background: #3498db;
+        }
+        
+        .btn-secondary:hover {
+            background: #2980b9;
+        }
+        
+        .commands {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .commands h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Binance Futures Testnet Trading Bot</h1>
+            <p class="subtitle">A powerful, modular Python trading bot for Binance Futures Testnet</p>
+            <span class="badge">Python 3.x</span>
+            <span class="badge">Testnet Only</span>
+            <span class="badge">Production Ready</span>
+        </header>
+
+        <div class="warning">
+            <strong>⚠️ Important:</strong> This bot is designed for TESTNET only. No real money is involved.
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>📊 Core Features</h3>
+                <ul>
+                    <li>Market & Limit Orders</li>
+                    <li>BUY & SELL Support</li>
+                    <li>STOP_MARKET Orders</li>
+                    <li>Real-time Balance Check</li>
+                    <li>Order Status Tracking</li>
+                    <li>Order Cancellation</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎨 Enhanced CLI</h3>
+                <ul>
+                    <li>Interactive Menu Mode</li>
+                    <li>Rich Terminal UI</li>
+                    <li>Colored Output</li>
+                    <li>Input Validation</li>
+                    <li>Confirmation Prompts</li>
+                    <li>Help Messages</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔒 Enterprise Grade</h3>
+                <ul>
+                    <li>Comprehensive Logging</li>
+                    <li>Error Handling</li>
+                    <li>Timestamp Sync</li>
+                    <li>Precision Validation</li>
+                    <li>Rotating Logs</li>
+                    <li>Modular Architecture</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commands">
+            <h2>🚀 Quick Start</h2>
+            
+            <h3>1. Install Dependencies</h3>
+            <div class="code-block">pip install -r requirements.txt</div>
+            
+            <h3>2. Configure Credentials</h3>
+            <div class="code-block"># Edit .env file with your testnet credentials
+BINANCE_API_KEY=your_key_here
+BINANCE_API_SECRET=your_secret_here</div>
+            
+            <h3>3. Run the Bot</h3>
+            <div class="code-block"># Interactive mode
+python trading_bot/cli.py
+
+# Or command line
+python trading_bot/cli.py place-order BTCUSDT BUY MARKET 0.001</div>
+        </div>
+
+        <div class="commands">
+            <h2>📖 Available Commands</h2>
+            <div class="code-block">
+python cli.py place-order BTCUSDT BUY MARKET 0.001      # Market order
+python cli.py place-order BTCUSDT SELL LIMIT 0.001 --price 50000  # Limit order
+python cli.py balance                                     # Check balance
+python cli.py status BTCUSDT 12345                        # Check order status
+python cli.py cancel BTCUSDT 12345                        # Cancel order
+python cli.py menu                                        # Interactive mode
+            </div>
+        </div>
+
+        <div class="commands">
+            <h2>🏗️ Project Structure</h2>
+            <div class="code-block">
+trading_bot/
+├── bot/
+│   ├── client.py          # Binance API wrapper
+│   ├── orders.py          # Order management
+│   └── validators.py      # Input validation
+├── logging_config.py      # Logging setup
+├── cli.py                 # CLI interface
+├── .env                   # Credentials
+└── README.md              # Documentation
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="https://github.com/YOUR_USERNAME/binance-trading-bot" class="btn">View on GitHub</a>
+            <a href="#docs" class="btn btn-secondary">Read Documentation</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Binance Futures Testnet Trading Bot | Built with Python, Typer, Rich</p>
+            <p style="margin-top: 0.5rem; color: #7f8c8d;">
+                <a href="https://testnet.binancefuture.com/" target="_blank">Get Testnet Credentials</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

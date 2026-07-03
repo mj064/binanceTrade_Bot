@@ -1,0 +1,21 @@
+2024-01-15 14:55:10,234 - trading_bot - INFO - client.py:45 - Initializing Binance client...
+2024-01-15 14:55:10,567 - trading_bot - INFO - client.py:87 - Connected to testnet. Server time: 1705311310234
+2024-01-15 14:55:10,890 - trading_bot - INFO - client.py:91 - Binance client initialized successfully
+2024-01-15 14:55:11,123 - trading_bot - INFO - orders.py:89 - Starting order validation and placement for ETHUSDT
+2024-01-15 14:55:11,456 - trading_bot - INFO - validators.py:45 - Validating symbol format: ETHUSDT
+2024-01-15 14:55:11,789 - trading_bot - INFO - validators.py:45 - Symbol validation passed: ETHUSDT
+2024-01-15 14:55:12,012 - trading_bot - INFO - validators.py:67 - Validating side: SELL
+2024-01-15 14:55:12,345 - trading_bot - INFO - validators.py:67 - Side validation passed: SELL
+2024-01-15 14:55:12,567 - trading_bot - INFO - validators.py:89 - Validating order type: LIMIT
+2024-01-15 14:55:12,890 - trading_bot - INFO - validators.py:89 - Order type validation passed: LIMIT
+2024-01-15 14:55:13,123 - trading_bot - INFO - validators.py:109 - Validating quantity: 0.1
+2024-01-15 14:55:13,456 - trading_bot - INFO - validators.py:109 - Quantity validation passed: 0.1
+2024-01-15 14:55:13,789 - trading_bot - INFO - validators.py:144 - Validating price: 3000
+2024-01-15 14:55:14,012 - trading_bot - INFO - validators.py:144 - Price validation passed: 3000
+2024-01-15 14:55:14,345 - trading_bot - INFO - validators.py:175 - Validating time in force: GTC
+2024-01-15 14:55:14,567 - trading_bot - INFO - validators.py:175 - Time in force validation passed: GTC
+2024-01-15 14:55:14,890 - trading_bot - INFO - client.py:165 - Attempting to place order: SELL 0.1 ETHUSDT @ LIMIT
+2024-01-15 14:55:15,123 - trading_bot - DEBUG - client.py:177 - Order parameters: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.1, 'price': 3000, 'timeInForce': 'GTC'}
+2024-01-15 14:55:15,890 - trading_bot - INFO - client.py:200 - Order placed successfully: Order ID 8392746, Status NEW
+2024-01-15 14:55:16,234 - trading_bot - DEBUG - client.py:201 - Full response: {'orderId': 8392746, 'symbol': 'ETHUSDT', 'status': 'NEW', 'clientOrderId': 'x-Set4-9928374-2389abcc7d2e', 'side': 'SELL', 'type': 'LIMIT', 'origQty': '0.1', 'executedQty': '0.0', 'price': '3000.00', 'timeInForce': 'GTC', 'updateTime': 1705311376234}
+2024-01-15 14:55:16,567 - trading_bot - INFO - orders.py:189 - Order completed successfully: symbol='ETHUSDT', side='SELL', order_type='LIMIT', quantity=0.1, price=3000.0, order_id=8392746, status='NEW', executed_qty=0.0, timestamp=datetime.datetime(2024, 1, 15, 14, 56, 16, 234000)
